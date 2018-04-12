@@ -31,7 +31,7 @@ module.exports  = {
     },
     
     preloadComplex: function(id, assetPath, volume, voices, delay, streamType, successCallback, errorCallback) {
-        if (!streamType) streamType = this.STREAM_MUSIC;
+        if (!streamType) streamType = this.STREAM_NOTIFICATION;
         return cordova.exec(successCallback, errorCallback, "NativeAudio", "preloadComplex", [id, assetPath, parseFloat(volume), voices, parseFloat(delay), streamType]);
     },
 

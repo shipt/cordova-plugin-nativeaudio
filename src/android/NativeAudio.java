@@ -84,7 +84,7 @@ public class NativeAudio extends CordovaPlugin implements AudioManager.OnAudioFo
 
 				int streamType;
 				if (data.length() <= 5) {
-					streamType = 3;
+					streamType = AudioManager.STREAM_NOTIFICATION;
 				} else {
 					streamType = data.getInt(5);
 				}
